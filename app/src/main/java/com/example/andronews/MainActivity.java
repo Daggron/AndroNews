@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     public static final String LOG_TAG = MainActivity.class.getName();
     private newsAdapter adapter;
-    private static final String API = "https://content.guardianapis.com/search?order-by=newest&show-elements=image&q=android&api-key=5f240507-4f2d-439d-98d9-985a00831805";
+    private static final String API = "https://content.guardianapis.com/search?order-by=newest&show-elements=image&show-fields=byline&q=android&api-key=5f240507-4f2d-439d-98d9-985a00831805";
 
     private TextView mEmptyStateTextView;
 
@@ -51,11 +51,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         loadingIndicator.setVisibility(View.GONE);
         // Clear the adapter of previous news data
+        mEmptyStateTextView.setText(R.string.no_news);
         adapter.clear();
         // If there is a valid list of news then add
         if (data != null && !data.isEmpty()) {
             adapter.addAll(data);
         }
+
     }
 
     @Override
@@ -71,9 +73,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         setContentView(R.layout.activity_main);
         loadingIndicator = findViewById(R.id.loading_indicator);
 
-
-        // Create a fake list of earthquake locations.
-        // Find a reference to the {@link ListView} in the layout
         final GridView newsListView = (GridView) findViewById(R.id.cardView);
 
         adapter = new newsAdapter(getApplication(), 0, new ArrayList<news>());

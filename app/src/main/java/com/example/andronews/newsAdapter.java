@@ -32,6 +32,8 @@ public class newsAdapter extends ArrayAdapter<news> {
         TextView date = convertView.findViewById(R.id.date);
         date.setText(eachnews.getDate());
 
+        TextView author = convertView.findViewById(R.id.author);
+        author.setText(eachnews.getAuthor());
 
         convertView.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.backdrop));
 

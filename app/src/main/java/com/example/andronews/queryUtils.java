@@ -150,8 +150,11 @@ public class queryUtils {
 
                 String url = currentNews.getString("webUrl");
 
+                JSONObject authors = currentNews.getJSONObject("fields");
+                String author=authors.getString("byline");
 
-                news NEWS = new news( date, title,section,url);
+
+                news NEWS = new news( author,date, title,section,url);
 
 
                 news.add(NEWS);
