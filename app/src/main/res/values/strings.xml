@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">andronews</string>
+    <string name="no_internet">No Internet Please Try Later</string>
+    <string name="no_news">No News Please try after some time</string>
+</resources>
