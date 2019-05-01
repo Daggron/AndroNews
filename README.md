@@ -17,4 +17,4 @@ No Internet Screen
 
 New Ui Screen
 
-![Image 4](https://github.com/Daggron/AndroNews/blob/master/ss/ss4.png = 250x250)
+![Image 4](https://github.com/Daggron/AndroNews/blob/master/ss/ss4.png  | width=100)
