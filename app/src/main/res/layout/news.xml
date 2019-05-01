@@ -1,25 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="260dp"
-    android:orientation="vertical"
-    android:layout_marginTop="20dp"
-    >
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/Image"
+        android:scaleType="centerCrop"
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/title"
-        android:textSize="24sp"
-        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textColor="@color/color_title"
         />
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/author"
         android:textSize="15sp"
-        android:textColor="#1b1b1f"/>
+        android:textColor="#1b1b1f"
+        android:layout_marginLeft="5dp"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -28,7 +37,8 @@
         android:textSize="14sp"
         android:textColor="#1b1b1d"
         android:text="16dec"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"/>
 
 
     <TextView
@@ -37,8 +47,8 @@
         android:id="@+id/tag"
         android:textSize="14sp"
         android:textColor="#1b1b1d"
-        android:layout_marginTop="10dp"/>
-
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"/>
 
 
 

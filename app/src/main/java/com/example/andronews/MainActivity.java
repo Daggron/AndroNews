@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     public static final String LOG_TAG = MainActivity.class.getName();
     private newsAdapter adapter;
-    private static final String API = "https://content.guardianapis.com/search?order-by=newest&show-elements=image&show-fields=byline&q=android&api-key=5f240507-4f2d-439d-98d9-985a00831805";
+
+    private static final String API = uriBuilder();//"https://newsapi.org/v2/everything?q=apple&from=2019-04-30&to=2019-04-30&sortBy=popularity&apiKey=fabb056ff8594a2c9cd1ea680aa83aa7";
 
     private TextView mEmptyStateTextView;
 
@@ -120,7 +121,26 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         }
 
 
+
+
+
     }
+
+    private static String uriBuilder() {
+        //https://newsapi.org/v2/everything?q=apple&from=2019-04-30&to=2019-04-30&sortBy=popularity&apiKey=fabb056ff8594a2c9cd1ea680aa83aa7
+        //https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=fabb056ff8594a2c9cd1ea680aa83aa7
+        Uri.Builder builder = new Uri.Builder();
+        builder.scheme("https")
+                .authority("newsapi.org")
+                .appendPath("v2")
+                .appendPath("top-headlines")
+                .appendQueryParameter("sources", "google-news")
+                   .appendQueryParameter("apiKey", "fabb056ff8594a2c9cd1ea680aa83aa7");
+        String myUrl = builder.build().toString();
+        return myUrl;
+    }
+
+
 
 
 }

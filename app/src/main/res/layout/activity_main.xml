@@ -5,24 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#f5f5f5">
+    android:background="@color/body_background">
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:id="@+id/tabs"
+           android:background="@color/colorPrimary">
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="50dp"
+               android:text="AndroNews"
+               android:textSize="26sp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="5dp"
+               android:layout_weight="1"
+               android:layout_gravity="center"/>
+       </LinearLayout>
+
 
 
     <GridView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/cardView"
-        android:numColumns="2"
+        android:numColumns="1"
         android:columnWidth="220dp"
         android:horizontalSpacing="20dp"
         android:verticalSpacing="35dp"
         android:stretchMode="columnWidth"
         android:gravity="center"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-
-
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/tabs"
         />
     <TextView
         android:id="@+id/empty_view"
@@ -39,13 +60,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"/>
-
-
-
-
-
-
-
-
 
 </RelativeLayout>

@@ -130,9 +130,8 @@ public class queryUtils {
 
             JSONObject baseJsonResponse = new JSONObject(newsJSON);
 
-            JSONObject jsonResults = baseJsonResponse.getJSONObject("response");
 
-            JSONArray properties = jsonResults.getJSONArray("results");
+            JSONArray properties = baseJsonResponse.getJSONArray("articles");
 
 
             for (int i = 0; i < properties.length(); i++) {
@@ -141,20 +140,22 @@ public class queryUtils {
                 JSONObject currentNews = properties.getJSONObject(i);
 
                 // Extract the value for the key called "webTitle"
-                String title = currentNews.getString("webTitle");
+                String title = currentNews.getString("title");
 
-                String section = currentNews.getString("sectionName");
-
-                String date = currentNews.getString("webPublicationDate");
+                String date = currentNews.getString("publishedAt");
 
 
-                String url = currentNews.getString("webUrl");
+                String url = currentNews.getString("url");
 
-                JSONObject authors = currentNews.getJSONObject("fields");
-                String author=authors.getString("byline");
+                String author=currentNews.getString("author");
 
+                JSONObject sources = currentNews.getJSONObject("source");
 
-                news NEWS = new news( author,date, title,section,url);
+                String source = sources.getString("name");
+
+                String image = currentNews.getString("urlToImage");
+
+                news NEWS = new news( author,date, title,source,url,image);
 
 
                 news.add(NEWS);
