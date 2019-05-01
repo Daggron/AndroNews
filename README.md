@@ -1,6 +1,8 @@
 # AndroNews
 
 a news app which fetch news online via guardian api and provide latest technology related news
+
+
 Old Ui Screen 1
 ![image 1](https://github.com/Daggron/AndroNews/blob/master/ss/ss1.png)
 
@@ -15,4 +17,4 @@ No Internet Screen
 
 New Ui Screen
 
-![Image 4](https://github.com/Daggron/AndroNews/blob/master/ss/ss4.png = 250*250)
+![Image 4](https://github.com/Daggron/AndroNews/blob/master/ss/ss4.png = 250x250)
