@@ -33,4 +33,5 @@ public class newsLoader extends AsyncTaskLoader<List<news>> {
     }
 
 
+
 }
